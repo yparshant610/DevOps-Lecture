@@ -1,0 +1,53 @@
+Starting from lecture 3, lecture 1 and 2 only have the syllabus that is to covered
+
+lecture 3 is the instance making 
+so after instance making and connecting through gitbash 
+
+##################
+Linux commands-
+
+whoami :- 
+    login user 
+
+date :- 
+    gives server date and time 
+
+cal 2026 :- 
+    print out the calender of 2026
+
+pwd(present working directory) :-
+    in which directory/folder currently working
+
+mkdir :-
+    this command make a directory/folder
+
+ls :-
+    it will give the list of files that are present
+
+ls -l :-
+    displays the contents of a directory in long listing format
+
+ls -r :- 
+    reverses the default sorting order of the file
+
+ls -lr :-
+    displays reverse contents of a directory in long listing format
+
+rm :- 
+    to delete file/directory 
+
+rmdir d :- 
+    to delete empty directory with name d
+
+ls -la :-
+    this will give all the content of a directory even hidden files in long listed format
+
+cd ~ :- 
+    this command tkae you to the root directory
+
+touch :-
+    this makes a new file
+
+rm -rf :-
+    powerful and destructive utility used to forcefully and recursively remove files and directories
+
