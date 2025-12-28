@@ -1,0 +1,41 @@
+Visual Editor (Vi)
+
+Command 
+#################################
+
+To open Visual Editor[ vi ] :-
+    If a file doesn't exist this will create a new file, if the file exist it will open that file.
+    {vi file_name}
+        i      - to start editing or inserting text.
+        esc    - to out of insert mode.
+        :wq    - to save the file.
+        :q!    - exit without saving changes.
+
+
+To open Stream Editor[ SED ] :-
+    In this editor their is no need to open file as like visual editor.
+    By using SED command we are not modifying the original file content
+    { sed 'command/word_to_replace/word_to_put/' file_name }
+    1. Substitution ::=
+        a. Replace the first occurence of the keyword hello with welcome.
+                { sed 's/hello/welcome/' data.txt }
+        b. Replace the second occurence of the keyword hellp with welcome.
+                { sed 's/hello/welcome/2' data.txt } 
+        c. Replace all the occurence of the keyword hello with welcome.
+                { sed 's/hello/welcome/g' t5.txt }  
+        d. Substite and save the changes in original file.
+                { sed -i 's/Hello/welcome/' t5.txt } 
+    2. Deletion ::=
+        a. Delete a specific line (e.g., line nth)
+                { sed 'nd' file_name }
+        b. Delete a range of lines (e.g., lines 1 to 3)
+                { sed '1,3d' file_name }
+        c. Delete lines matching a pattern
+                { sed '/pattern/d' file_name }
+        d. Remove all empty lines
+                { sed '/^$/d' file_name }
+        e. Delete the last line
+                { sed '$d' file_name }
+
+    3. Printing ::=
+        
