@@ -1,0 +1,27 @@
+Working with User Groups :- 
+    1. Display a user group 
+            { cat /etc/group }
+    2. Create a group
+            { sudo groupadd group_name }
+    3. Command - id ec2-user
+            output - 
+                -> 1000(ec2-user) : The primary group for user.
+                -> 4(adm) : The adm group allows access to administrative logs.
+                -> 10(wheel) : The wheel group typically grants administrative privileges, such as the ability to use sudo.
+                -> 190(systemd-journal) : This group allow access to systemd's journal logs
+            Log locations -
+                ->Debian-based system(Ubuntu) : Use /var/log/syslog
+                ->Red hat-based system(CentOS, RHEL, Amazon Linux) : Use /var/log/messages
+    4. To add user to group
+            { sudo usermod -aG team_name UserName_to_add_in_group }
+    5. Display users in a group
+            { sudo lid -g group_name }
+    6. Remove a particular user from a group 
+            { sudo gpasswd -d User_name group_name }
+    7. Display group a user belongs to
+            { id User_name }
+    8. Delete a group
+            { sudo groupdel group_name }
+    9. Change group name 
+            { sudo groupmod -n new_name_for_group current_name_of_group }
+    
