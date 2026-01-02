@@ -38,4 +38,49 @@ To open Stream Editor[ SED ] :-
                 { sed '$d' file_name }
 
     3. Printing ::=
-        
+        a. Print line from 10th to 70th
+                { sed -n '10,70p' data.txt }
+        b. Insert data at the second line
+                { sed '2i\Welcome to the system' f1.txt }
+        c. Insert data at the last line 
+                { sed -i '$a\last line' f1.txt }
+
+
+User Management :-
+    1. Create a User
+            { sudo useradd User_name }
+    2. Set or Update password for a user
+            { sudo passwd User_name }
+    3. To get every user detail 
+            { cat /etc/passwd }
+            but this command also give more data so instead of this use this 
+            { grep User_Name_to_search /etc/passwd }
+    4. Switch user
+            { su User_name }
+    5. Get out of current user
+            { exit }
+    6. Delete a User
+            { sudo userdel User_name }   -  this will not remove the user directory 
+            { sudo userdel User_name --remove }
+    7. Change Password
+            same command to set is password is again used to change the password
+            { sudo passwd User_name }
+    8. Enable password-based authentication 
+            a. Modify the following flies:
+                -> sudoers
+                -> sshd_config
+            b. Sudoers file
+                -> { sudo visudo }
+                -> add a line in the section ['Allow root to tun command anywhere']
+                  { miike  ALL(ALL:ALL)  ALL }
+                -> For exit and save  ctrl + X + Y + Enter
+            c. Enable password authentication
+                -> open sshd_config file
+                   { sudo vi /etc/ssh/sshd_config }
+                -> change the value of PasswordAuthentication to Yes
+                -> After that restart the SSH services
+                   { sudo systemctl restart sshd }
+                -> Now to connect to the Linux VM using a username and password
+                   { ssh User_name@Public_IP_of_the_Instance }
+
+
