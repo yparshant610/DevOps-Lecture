@@ -1,0 +1,45 @@
+
+chown ::==
+    This command is used to change the ownership of files and directories.
+        { chown [OPTIONS] USER[:GROUP] FILE }
+        1. Change Owner Only
+            { sudo chown new_owner file_name/directory }
+        2. Change Group Only
+            { sudo chown :new_group file_name/directory }
+        3. Change Owner and Group
+            { sudo chown new_owner:new_group file_name/directory }
+        
+        [OPTIONS]               Description
+      ->   -R	                 recursive
+      ->   -v                  verbose output
+      ->   --from=OLD:GROUP    change only if ownership 
+      
+Finding files in linux ::==
+    This command allows you to search files/directories.
+        { find [path] [expression] }
+            
+            # path - directory to start the search(eg - /home or /root)
+            # expression - criteria such as file name, type, size, etc.
+                ● -name = Matches files with a specific name.
+                ● -type = Specifies the type of item, 
+                            f: regular, 
+                            d: directories
+                ● -empty = empty files or directories
+                ● -mtime = Matches files based on modification time.
+                            n: files exctly modified n days ago.
+                            +n: file modified more than n days ago
+                            -n: files modified less than n days ago
+                ● -print = Display the matched files
+                ● -delete = Remove the matched files 
+
+
+        1. Search for files with a specific name 
+            { sudo find /home -name f1.txt }
+        2. Search for empty files
+            { sudo find /home -type f -empty }
+        3. Search for empty directories
+            { sudo find /home -type d -empty }
+        4. Find files modified n'th days ago 
+            { sudo find /home -mtime n -print }
+        5. Delete files older than n'th days ago
+            { sudo find /home -mtime n -delete }
