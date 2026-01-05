@@ -1,0 +1,62 @@
+File permission in Linux
+- Used to secure and protect file data by controlling who can access and modify files and directory
+
+Type of permission :-
+    ->r(read) - permission to view/read the content 
+    -w(write) - permission to modify/creating/deleting the content and renaming files within a directory
+    -x(execute) - enable running a file as a program or accessing the contents of a directory
+
+file/directory permission representation :-
+    -> the first line character indicate the type of file[ - for regular files, d for directories, l for link  ]
+    -> the next nine characters represent permission, grouped into three sets of three ::==
+        => First 3 ::: User/Owner permission
+        => Middle 3 ::: Group permission
+        => Last 3 ::: Other permission
+
+Modify the peemission (chmod) :-
+    Used to change the file and directory permissions
+    
+    1. Symbolic Mode -
+        -> + :: add a permission
+        -> - :: remove a permission
+        -> = :: set a specific permission, overridding existing permission
+        eg:- 
+            # give execute permission to user ---- chmod u+x f1.txt
+            # give write permission to group ---- chmod g+w f1.txt
+            # remove execute permission for others ---- chmod o-x f1.txt
+            # remove all permission for others ---- chmod o-rwx f1.txt
+            # give all permission to the group ---- chmod g+rwx f1.txt
+
+    2. Numeric Mode
+        
+        0	No permissions
+        1	Execute only
+        2	Write only
+        4	Read only
+        
+        3	Write + Execute
+        5	Read + Execute
+        6	Read + Write
+        7	Read + Write + Execute
+
+        eg:-
+            # Give execute permission to all (ugo+x) -
+            chmod 111 f1.txt
+
+            # Give write permission to all (ugo+w)
+            chmod 222 f1.txt
+
+            # User: rwx, Group: rw, Others: rx
+            chmod 765 f1.txt
+
+            # User: r, Group: rx, Others: rw
+            chmod 456 f1.txt
+
+            # Give full permissions to everyone
+            chmod 777 f1.txt
+
+            # Remove all permissions from User & Group, but allow Others full access
+            chmod 007 f1.txt
+
+
+
