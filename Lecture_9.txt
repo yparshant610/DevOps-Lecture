@@ -1,0 +1,29 @@
+Web server
+    These are static appliation server
+    like:- httpd, NGinx
+
+    1. Install the HTTPD webServer
+        { sudo yum Install httpd -y }
+    2. Check the status of the webServer
+        { sudo service httpd status }
+    3. To start a webServer
+        { sudo service httpd start }
+    4. To host your website files, navigate to the content directory of the webServer:
+        { cd /var/www/html }
+        { sudo vi index.html }
+
+Systemctl in linux
+    It is a command line utility used to manage and control system servers.
+    It is one of the primary tools for administering services, enabling you to start, stop, enable, disable, and Check the status of services
+    1. Stop a service
+        { sudo Systemctl stop <service_name> }
+    2. Start a service
+        { sudo Systemctl start <service_name> }
+    3. Restart a service - stops the service and then restart
+        { sudo Systemctl restart <service_name> }
+    4. Reload a service - reload the configration of a runing services without stopping it
+        { sudo Systemctl reload <service_name> }
+    5. Enable/Disable services
+        { sudo Systemctl enable/disable <service_name> }
+
+• To Check ram usage - { top }
