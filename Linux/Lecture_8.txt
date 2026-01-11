@@ -1,0 +1,39 @@
+Zip file in linux
+    Basic Syntax to create a zip file
+        { zip [file_name_to_zip] [content] }
+    Basic Syntax to unzip a zip file
+        { unzip [file_name_to_unzip] }
+
+Networking command in linux
+    1. ping = used to check connectivity between system and another host
+        { ping [Ip-address] }
+    2. wget = used to download files from internet.
+        { wget [url] }
+    3. curl = used to send HTTP request to a server and fetch responses
+        { curl [link] }
+    4. ifconfig = Display the IP address and network configuration of you machine.
+        { ifconfig }
+    5. ip =  mordern replacement of ifconfig, route, arp
+
+Package manager in linux
+    A package manager is a tool that install software, update software, remove software, and manages dependencies automatically.
+    For
+        • Amazon Linux/ Red Hat Linux/ CentOS: yum
+        • Ubuntu/ Debain: apt
+    1. For checking if package is installed or net
+        eg:- for git
+                git --version
+    2. install a package
+        { sudo yum install <Package_name> }
+    3. To check where it is installed 
+        { whereis <Package_name> }
+    4. Uninstall package
+        • Amazon Linux/ Red Hat Linux/ CentOS
+            { sudo yum remove <Package_name> }
+        • Ubuntu/ Debain
+            { sudo apt remove <Package_name> }
+    5. Update Software: to update install package
+        • Amazon Linux/ Red Hat Linux/ CentOS
+            { sudo yum update }
+        • Ubuntu/ Debain
+            { sudo apt update && sudo apt upgrade }
