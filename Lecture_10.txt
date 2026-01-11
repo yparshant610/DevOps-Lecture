@@ -1,0 +1,49 @@
+Working with Link files
+    There are two types of link files in linux:
+        1. Hard Link
+        2. Soft Link(Symbolic Link)
+    ##########
+    Hard Link
+    ##########
+        for degister recovery
+        1. Create a hard link-
+            { ln <file_to_link> <file_to_which_it_link> }
+        2. To check inode numbers-
+            { ls -li }
+
+    ##########
+    Soft Link
+    ##########
+        This is like a shortcut of a file if original file is tempered the shortcut file also shows changes
+        1. Create a symbolic link
+            { ln -s <original_file> <soft_link_file> }
+            in original_file we will give the full path also to access it
+    
+Task Manager 
+    { ps aux }
+        • a(All Users): Display processes of all users on the system.
+        • u(User-Oriented Output): Display processes in user-friendly format
+        • x(Without Conttrolling Terminal): Includes processes that do not have Conttrolling Terminal
+
+    Here's how to run a process, keep it running, and then kill it:
+        Step 1 ::==
+            start a long-running process    
+                eg:- 
+                    sleep 1000 &
+                        [ The '&' runs the process in the background ]
+                        [ The terminal return a Process ID(PID) ]
+        
+        Step 2 ::==
+            Check running processes
+                eg:- 
+                    ps aux | grep sleep
+        
+        Step 3 ::==
+            Kill the Process
+                eg:- 
+                    Kill <PID>
+            Forcefully shutdown
+                eg:-
+                    kill -9 <PID>
+
+To check ram utilization :- { free -m }
