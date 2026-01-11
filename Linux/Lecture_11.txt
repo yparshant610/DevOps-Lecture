@@ -1,0 +1,47 @@
+Host changing
+    a). Change hostname temporarily =>
+        { sudo hostname new-hostname }
+    b). Change hostname permanently =>
+        Step 1: Edit the /etc/hostname file(vi editor)
+            { sudo vi /etc/hostname}
+        Step 2: To enter insert mode press "i".
+        Step 3: Change hostname to new-hostname.
+        Step 4: press "esc" to exit insert mode.
+        Step 5: to save type ":wq" and press enter.
+
+
+###############
+Shell Scripting
+###############
+    1. Create a script file
+        { vi <script_file_name>.sh }
+    2. Run a script file
+        { sh <script_file_name>.sh }
+    3. If want to use different flavor of shell scripting, then add at top "#! /bin/bash" in script file
+    
+    Rules for variable names ::==
+        • Variables names can contain letters, numbers, and underscores(_).
+        • They cannot start with a number.
+        • Avoid using special characters or reserved keywords.
+        eg:- 
+            average=10.3
+            echo $average
+        •  If their is an error in script file like declaring variable, mnormal command error then rest all lines will execute. Gives error in that particular line
+        Types of variables:-
+            a.) Local variables: can be accessed in the same script file
+            b.) Environment variables: Predefined by linux
+            to make a variable as Environment variable use "export"
+            c.) Read only variables: Cannot be changed once defined.
+        • To comment a line we use #
+        # Define a local variable
+            local_val="i am local variable"
+        # Define read only variable
+            readonly val="i am read only variable"
+        # Define and export a Environment variable
+            export env_var="i am an Environment variable"
+        # Display the Variables
+            echo "Local Variable:$local_val"
+            echo "Environment Variable:$env_var"
+        • we can call another script or command to demonstrate inheritance
+            { ./child_script.sh }
+        • If want to take input use "read"
